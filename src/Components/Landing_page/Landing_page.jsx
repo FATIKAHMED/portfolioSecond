@@ -1,12 +1,14 @@
 import React from 'react'
 import './Landing_page.css'
+import profile from '../../Assets/profile_picture.png'
 
 function Landing_page() {
   return (
    <>
-   <div className='h-[100vh] flex  bg-black p-2'>
-    <div className='text-teal-400 w-[50%] flex flex-col items-center'>
-   <div className='mt-10'>
+   
+ 
+   <div className=' bg-black flex flex-col justify-center items-center text-teal-400 h-[100vh]'>
+    <img className='items-center m-4 rounded-full' src={profile} />
    <h1 className="md:text-4xl text-xl font-normal text-white">
           Hello, I'm
           <span className=""> Fatik Ahmed Khan</span>,
@@ -14,7 +16,7 @@ function Landing_page() {
         <h1 className="md:text-4xl text-xl font-normal text-white">
           I'm full stack web developer
         </h1>
-        <button className=' view-button flex items-center gap-5 text-xl font-normal mt-8 text-white border-[3px] pl-5 pr-5 pt-2 pb-2 hover:bg-teal-400 transition-all duration-150 ease-in'>View My Work
+        <button className=' view-button flex items-center gap-5 text-xl font-normal mt-8 text-white border-[3px] pl-5 pr-5 pt-2 pb-2 hover:bg-gradient-to-r from-teal-600 to-teal-900 transition-all duration-150 ease-in'>View My Work
         <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-8 w-8 button-arrow"
@@ -28,12 +30,9 @@ function Landing_page() {
             />
           </svg>
         </button>
-        <u className='mt-8 md:text-4xl text-2xl font-normal text-white justify-start flex pt-4 pb-4 pr-4'>BLOG</u>
-       <p className=' pt-4 pb-4 pr-4 '>lorem is the dummy text!!!</p>
+       
    </div>
    
-    </div>
-   </div>
    </>
   )
 }

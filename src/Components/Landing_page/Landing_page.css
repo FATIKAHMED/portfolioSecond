@@ -1,5 +1,5 @@
 .button-arrow {
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .view-button:hover > .button-arrow {
