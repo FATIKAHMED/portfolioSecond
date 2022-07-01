@@ -1,20 +1,54 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./Navbar.css";
 
 function Navbar() {
+  const [active, setActive] = useState("nav__menu");
+  const [icon, setIcon] = useState("nav__toggler");
+  const navToggle = () => {
+    if (active === "nav__menu") {
+      setActive("nav__menu nav__active");
+    } else setActive("nav__menu");
+
+    // Icon Toggler
+    if (icon === "nav__toggler") {
+      setIcon("nav__toggler toggle");
+    } else setIcon("nav__toggler");
+  };
   return (
-    <>
-    <div className=' bg-gradient-to-r from-teal-600 to-teal-900 sticky top-0 '>
-      <nav >
-        <div className=' flex flex-wrap gap-8 ml-8 '>
-        <a className='text-white m-4 text-2xl cursor-pointer ' href='#'>Home</a>
-        <a className='text-white m-4 text-2xl cursor-pointer  ' href='#'>About</a>
-        <a className='text-white m-4 text-2xl cursor-pointer  ' href='#'>Portfolio</a>
-        <a className='text-white m-4 text-2xl cursor-pointer  ' href='#'>Contact</a>
-        </div>
-      </nav>
-  </div>
-    </>
-  )
+    <nav className="nav">
+      <a href="#" className="nav__brand">
+        lorem
+      </a>
+      <ul className={active}>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            Home
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            About
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            Portfolio
+          </a>
+        </li>
+        
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <div onClick={navToggle} className={icon}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -1,9 +1,10 @@
 import React from "react";
+import './About.css'
 import demoprofile from '../../Assets/demo.jpg'
 
 function About() {
   return (
-    <div className=" bg-gradient-to-r from-black to-gray-700  items-end pb-4 justify-center gap-[20px] h-[100vh] flex  ">
+    <div className=" bg-gradient-to-r from-black to-gray-700  items-end pb-4 justify-center gap-[20px] h-[100vh] flex ">
       <div className="w-[50%] pb-3 ">
         <h2 className="text-white md:text-4xl text-lg   font-normal ml-6 ">
           Crafting
@@ -21,8 +22,8 @@ function About() {
           View Some Projects
         </button>
       </div>
-      <div className="text-white w-[50%] object-contain">
-        <img className=" w-[50vw] h-[85vh] p-3" src={demoprofile}/>
+      <div className="text-white w-[50%] object-contain flex flex-wrap">
+        <img className=" w-[50vw] h-[85vh] p-3 " src={demoprofile}/>
       </div>
     </div>
   );
